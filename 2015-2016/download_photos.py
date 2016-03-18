@@ -7,11 +7,6 @@ def string_clean(old_string):
     valid_chars = string.ascii_letters + ',-_'
     return ''.join(char for char in old_string if char in valid_chars)
 
-def save_image(search, name, file_extention = "Player Photos"):
-    file_name = "{file}/{name}.png".format(file = file_extention, name = name)
-    with open(file_name,'wb') as f:
-        f.write(search.content)
-
 base_url = "http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/statscube/players/large/"
 missing_file = open('Missing Players.txt','w')
 with open('NBA Players 2015-2016.txt','r') as f:
